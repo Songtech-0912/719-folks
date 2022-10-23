@@ -17,6 +17,7 @@ main {
 
 section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
@@ -33,4 +34,6 @@ h1, h2, h3, h4, h5, h6, p {
 
 h1 {
   font-size: 4rem;
+  margin-top: 1rem;
+  margin-bottom; 1rem;
 }

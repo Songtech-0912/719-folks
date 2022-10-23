@@ -10,8 +10,18 @@
 <body>
   <main>
     <section>
-      <h1>https://discord.gg/HMXq2X7f</h1>
+      <h1 id="url">discord.gg/HMXq2X7f</h1>
+      <div id="qrcode"></div>
     </section>
   </main>
+  <!--qr.js used from https://github.com/lifthrasiir/qr.js/blob/master/qr.js-->
+  <script src="./qr.js"></script>
+  <script>
+    let url = "https://" + document.getElementById("url").innerText;
+    let options = {ecclevel: "L"};
+    let qr_element = QRCode.generateHTML(url, options);
+    console.log(qr_element);
+    document.getElementById("qrcode").append(qr_element);
+  </script>
 </body>
 </html>
